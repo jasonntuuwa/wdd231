@@ -4,11 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 231 - Course Introduction</title>
+    <meta name="description"
+        content="Jason Ntuuwa's WDD 231 course home page, showcasing the ThinkBright web development portfolio and completed certificate courses.">
+    <meta name="author" content="Jason Ntuuwa">
+    <title>WDD 231 - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </head>
 
 <body>
@@ -19,20 +28,49 @@
         <nav id="nav-bar" class="navigation">
             <ul>
                 <li class="current"><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="chamber.html">Chamber</a></li>
+                <li><a href="final.html">Final</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <h1>Home</h1>
 
+        <div class="home-grid">
+            <section class="about">
+                <h2>About Me</h2>
+                <p>Hey, I'm Jason Ntuuwa, a Computer Science student at BYU-Idaho who loves turning ideas into things
+                    people can actually click, scroll, and interact with. I got hooked on web development through the
+                    WDD course sequence, where HTML, CSS, and JavaScript went from confusing symbols to actual tools I
+                    could build with. There's something satisfying about watching a blank page slowly turn into
+                    something real. When I'm not coding, you'll probably find me on the basketball court working on my
+                    jump shot, grinding through FIFA matches on Xbox (I take my squad very seriously), or falling down
+                    YouTube rabbit holes watching the latest inventions and tech breakthroughs. Mexican food is one of
+                    my go-tos too, especially street tacos with steak, lime, and cilantro, and when I'm really hungry,
+                    nothing hits quite like a torta. I guess you could say I like building things, watching other people
+                    build cool things, and eating really good tacos while I do it.</p>
+            </section>
+
+            <section class="photo">
+                <h2>Student Photo</h2>
+                <img src="images/student-photo.jpg" alt="Photo of Jason Ntuuwa">
+            </section>
+        </div>
+
+        <section class="courses">
+            <h2>Web Certificate Courses</h2>
+            <div class="course-filters">
+                <button class="active" data-filter="all">All</button>
+                <button data-filter="wdd">WDD</button>
+                <button data-filter="cse">CSE</button>
+            </div>
+            <div id="course-cards" class="course-cards"></div>
+            <p id="total-credits" class="total-credits"></p>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Jason Ntuuwa. WDD 231 Course Project.</p>
-        <p>ThinkBright</p>
-        <p id="lastModified"></p>
         <div class="social-icons">
             <a href="https://github.com/jasonntuuwa/wdd231" target="_blank" aria-label="GitHub">
                 <img src="images/github.svg" alt="GitHub icon">
@@ -44,9 +82,9 @@
                 <img src="images/instagram.svg" alt="Instagram icon">
             </a>
         </div>
+        <p>&copy; <span id="currentYear"></span> &bull; Jason Ntuuwa &bull; Minnesota, USA</p>
+        <p id="lastModified"></p>
     </footer>
-
-    <script src="scripts/scripts.js"></script>
 </body>
 
 </html>
