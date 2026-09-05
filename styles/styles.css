@@ -21,7 +21,7 @@ body {
     color: var(--text-dark);
     background-color: var(--background-light);
     line-height: 1.6;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -31,7 +31,7 @@ header {
     grid-template-columns: 24px auto 44px;
     align-items: center;
     padding: 0.5rem 1rem;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     background-color: var(--header-bg);
     color: var(--text-dark);
