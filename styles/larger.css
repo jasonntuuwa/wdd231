@@ -1,22 +1,24 @@
-.hamburger {
-    display: none;
-}
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
 
-.navigation {
-    display: block;
-}
+    .navigation {
+        display: block;
+    }
 
-.navigation ul {
-    flex-direction: row;
-    gap: 1.5rem;
-}
+    .navigation ul {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
 
-.navigation ul li a {
-    padding: 0.5rem 0.75rem;
-}
+    .navigation ul li a {
+        padding: 0.5rem 0.75rem;
+    }
 
-.home-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 1.5rem;
+    .home-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1.5rem;
+    }
 }
