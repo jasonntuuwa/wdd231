@@ -1,0 +1,26 @@
+@media (min-width: 768px) {
+    header {
+        flex-wrap: nowrap;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    /* no hamburger needed on wide screens */
+
+    nav ul {
+        display: flex !important;
+        flex-direction: row;
+        width: auto;
+    }
+
+    nav a {
+        border-top: none;
+    }
+
+    #directory-cards.grid-view {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columns on desktop */
+    }
+}

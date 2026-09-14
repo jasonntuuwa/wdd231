@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Munkabeans",
+        "address": "1206 Mainstreet, Hopkins, MN 55343",
+        "phone": "(952) 938-9056",
+        "url": "https://www.munkabeans.com",
+        "image": "munkabeans.png",
+        "membership": 3,
+        "tagline": "Cozy neighborhood coffee shop"
+    },
+    {
+        "name": "Hance Hardware",
+        "address": "903 Hopkins Center, Hopkins, MN 55343",
+        "phone": "(952) 938-7367",
+        "url": "https://www.acehardware.com/store-details/07321",
+        "image": "hance-hardware.png",
+        "membership": 2,
+        "tagline": "Your neighborhood Ace hardware store"
+    },
+    {
+        "name": "Angel Food",
+        "address": "701 Mainstreet, Hopkins, MN 55343",
+        "phone": "(952) 555-0146",
+        "url": "https://www.angelfoodmn.com/hopkins",
+        "image": "angel-food.png",
+        "membership": 2,
+        "tagline": "Bakery known for custom cakes and cupcakes"
+    },
+    {
+        "name": "Shamblott Family Dentistry",
+        "address": "33 10th Ave S #250, Hopkins, MN 55343",
+        "phone": "(952) 777-5126",
+        "url": "https://www.shamblottfamilydentistry.com",
+        "image": "shamblott-dentistry.png",
+        "membership": 3,
+        "tagline": "Gentle care for the whole family"
+    },
+    {
+        "name": "Tonka Cycle & Ski",
+        "address": "416 11th Ave S, Hopkins, MN 55343",
+        "phone": "(952) 938-8336",
+        "url": "https://www.tonkacycleandski.com",
+        "image": "tonka-cycle.png",
+        "membership": 1,
+        "tagline": "Bike sales, service, and rentals"
+    },
+    {
+        "name": "Schatz Real Estate Group",
+        "address": "114 8th Ave N, Hopkins, MN 55343",
+        "phone": "(952) 938-2593",
+        "url": "https://schatzmpls.com/",
+        "image": "schatz-realty.png",
+        "membership": 3,
+        "tagline": "Helping you find home in Hopkins"
+    },
+    {
+        "name": "Bloomgren Hanson Legal, PLLC",
+        "address": "903 Mainstreet A, Hopkins, MN 55343",
+        "phone": "(952) 406-8221",
+        "url": "https://www.bloomgrenhanson.com",
+        "image": "bloomgren-hanson.png",
+        "membership": 1,
+        "tagline": "Local legal counsel for families and business"
+    }
+]
