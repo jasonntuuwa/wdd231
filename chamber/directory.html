@@ -16,7 +16,6 @@
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/small.css">
     <link rel="stylesheet" href="css/larger.css">
@@ -27,7 +26,7 @@
 <body>
 
     <header>
-        <img src="images/logo.png" alt="Hopkins Chamber of Commerce logo">
+        <img src="images/logo.svg" alt="Hopkins Chamber of Commerce logo">
         <h1>Hopkins Chamber of Commerce</h1>
         <button id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
         <nav>
@@ -47,16 +46,33 @@
             <button id="list-btn" aria-label="List view">List</button>
         </div>
         <section id="directory-cards"></section>
-       
     </main>
 
     <footer>
-        <p>Hopkins Chamber of Commerce</p>
-        <p>Address, City, State ZIP</p>
-        <p>Email | Phone</p>
-        <p>WDD 231 | Jason Ntuuwa</p>
-        <p>&copy; <span id="year"></span> Hopkins Chamber of Commerce</p>
-        <p>Last Modified: <span id="last-modified"></span></p>
+        <div class="footer-contact">
+            <p>Hopkins Chamber of Commerce</p>
+            <p>1010 1st St S, Hopkins, MN 55343</p>
+            <p>info@hopkinschamber.org | (952) 555-0100</p>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://github.com/jasonntuuwa/wdd231" target="_blank" rel="noopener" aria-label="GitHub">
+                <img src="images/github.svg" alt="GitHub icon" width="24" height="24">
+            </a>
+            <a href="https://www.linkedin.com/in/jason-ntuuwa-148856207/" target="_blank" rel="noopener"
+                aria-label="LinkedIn">
+                <img src="images/linkedin.svg" alt="LinkedIn icon" width="24" height="24">
+            </a>
+            <a href="https://www.instagram.com/jay_meiinn/" target="_blank" rel="noopener" aria-label="Instagram">
+                <img src="images/instagram.svg" alt="Instagram icon" width="24" height="24">
+            </a>
+        </div>
+
+        <div class="footer-dev">
+            <p>WDD 231 | Jason Ntuuwa</p>
+            <p>&copy; <span id="year"></span> Hopkins Chamber of Commerce</p>
+            <p>Last Modification: <span id="last-modified"></span></p>
+        </div>
     </footer>
 
 </body>

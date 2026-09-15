@@ -7,8 +7,6 @@
         display: none;
     }
 
-    /* no hamburger needed on wide screens */
-
     nav ul {
         display: flex !important;
         flex-direction: row;
@@ -21,6 +19,31 @@
 
     #directory-cards.grid-view {
         grid-template-columns: repeat(3, 1fr);
-        /* 3 columns on desktop */
+    }
+
+    footer {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .footer-contact {
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    .footer-dev {
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    .footer-social {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 1rem;
     }
 }
