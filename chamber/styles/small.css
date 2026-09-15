@@ -1,3 +1,8 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 :root {
     --primary-color: #1b4332;
     --secondary-color: #40916c;
@@ -96,6 +101,16 @@ main {
 
 #directory-cards.grid-view {
     grid-template-columns: repeat(2, 1fr);
+}
+
+#directory-cards.list-view .card-logo {
+    display: none;
+}
+
+.card-details p,
+.card-details a {
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .member-card {
