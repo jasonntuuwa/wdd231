@@ -13,15 +13,20 @@ function displayMembers(members) {
         card.classList.add('member-card');
 
         card.innerHTML = `
-      <h3>${member.name}</h3>
-      <p>${member.tagline}</p>
-      <img src="images/${member.image}" alt="${member.name} logo" loading="lazy" width="200" height="150">
-      <p><strong>Address:</strong> ${member.address}</p>
-      <p><strong>Phone:</strong> ${member.phone}</p>
-      <p><strong>Website:</strong> <a href="${member.url}" target="_blank" rel="noopener">${member.url}</a></p>
-      <p class="membership-level">${membershipLabel(member.membership)}</p>
-    `;
-
+        <h3>${member.name}</h3>
+        <p class="member-tagline">${member.tagline}</p>
+        <hr class="card-divider">
+        <div class="card-body">
+            <img src="images/${member.image}" alt="${member.name} logo" loading="lazy" width="120" height="90" class="card-logo">
+            <div class="card-details">
+                <p><strong>Email:</strong> ${member.email || 'info@' + member.name.toLowerCase().replace(/[^a-z]/g, '') + '.com'}</p>
+                <p><strong>Phone:</strong> ${member.phone}</p>
+                <p><strong>URL:</strong> <a href="${member.url}" target="_blank" rel="noopener">${member.url}</a></p>
+            </div>
+        </div>
+        <p class="membership-level">${membershipLabel(member.membership)}</p>
+      `;
+    
         container.appendChild(card);
     });
 }

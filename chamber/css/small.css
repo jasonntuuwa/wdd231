@@ -4,6 +4,7 @@
     --background-color: #f4f4f2;
     --text-color: #1a1a1a;
     --font-main: 'Segoe UI', sans-serif;
+    --tag-color:#777;
 }
 
 body {
@@ -98,6 +99,42 @@ main {
 .member-card img {
     border-radius: 4px;
     margin-bottom: 0.5rem;
+}
+
+.member-tagline {
+    font-size: 0.85rem;
+    color: --tag-color;
+    margin-top: -0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.card-divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 0.5rem 0;
+}
+
+.card-body {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.card-logo {
+    flex-shrink: 0;
+    width: 100px;
+    height: auto;
+}
+
+.card-details p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+.member-card h3,
+.member-tagline {
+    text-align: center;
 }
 
 footer {
