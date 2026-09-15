@@ -11,23 +11,28 @@
     <!-- Facebook / Open Graph -->
     <meta property="og:title" content="Business Directory | Hopkins Chamber of Commerce">
     <meta property="og:description" content="Browse member businesses of the Hopkins Chamber of Commerce.">
-    <meta property="og:image" content="images/og-directory.jpg">
+    <meta property="og:image" content="https://jasonntuuwa.github.io/wdd231/chamber/images/og-directory.png">
     <meta property="og:url" content="https://jasonntuuwa.github.io/wdd231/chamber/directory.html">
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/small.css">
-    <link rel="stylesheet" href="css/larger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
 
-    <script src="js/directory.js" defer></script>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/directory.js" defer></script>
 </head>
 
 <body>
 
     <header>
         <img src="images/logo.svg" alt="Hopkins Chamber of Commerce logo">
-        <h1>Hopkins Chamber of Commerce</h1>
+        <p class="site-title"> Hopkins Chamber of Commerce</p>
         <button id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
         <nav>
             <ul id="nav-menu">
@@ -40,7 +45,7 @@
     </header>
 
     <main>
-        <h2>Business Directory</h2>
+        <h1>Business Directory</h1>
         <div id="view-toggle">
             <button id="grid-btn" aria-label="Grid view">Grid</button>
             <button id="list-btn" aria-label="List view">List</button>
