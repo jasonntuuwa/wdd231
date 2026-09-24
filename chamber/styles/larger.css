@@ -31,12 +31,12 @@
 
     .footer-contact {
         text-align: left;
-        white-space: nowrap;
+        /* white-space: nowrap; */
     }
 
     .footer-dev {
         text-align: right;
-        white-space: nowrap;
+        /* white-space: nowrap; */
     }
 
     .footer-social {
@@ -46,4 +46,14 @@
         display: flex;
         gap: 1rem;
     }
+
+    
+    #spotlight-cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .home {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    
 }

@@ -9,7 +9,7 @@
     --background-color: #f4f4f2;
     --text-color: #1a1a1a;
     --white: #ffffff;
-    --nav-border: rgba(255, 255, 255, 0.2)
+    --nav-border: rgba(255, 255, 255, 0.2);
     --font-main: 'Open Sans', sans-serif;
     --font-heading: 'Poppins', sans-serif;
 }
@@ -75,6 +75,12 @@ nav a {
 
 main {
     padding: 1rem;
+}
+
+.home {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
 }
 
 #view-toggle {
@@ -167,4 +173,79 @@ footer {
     padding: 1rem;
     text-align: center;
     font-size: 0.85rem;
+}
+
+/* wayfinding: highlights the current page in the nav */
+nav a.active {
+    font-weight: 700;
+    border-bottom: 3px solid var(--white);
+}
+
+/* hero: img scales with the screen, CTA sits on top of it */
+.hero {
+    position: relative;
+    grid-column: 1 / -1;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* keeps aspect ratio = no distortion */
+}
+
+.cta {
+    position: absolute;
+    left: 50%;
+    bottom: 1.5rem;
+    transform: translateX(-50%);
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    /* white on dark green passes AA contrast */
+    color: var(--white);
+    font-family: var(--font-heading);
+    text-decoration: none;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+
+
+#events,
+#weather,
+.spotlight-card {
+    background: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+#spotlight {
+    grid-column: 1 / -1;
+}
+
+#spotlight-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.spotlight-card {
+    text-align: center;
+}
+
+.spotlight-card p {
+    margin: 0.25rem 0;
+    overflow-wrap: break-word;
+    /* long URLs won't cause horizontal scroll */
+}
+
+.temp {
+    font-size: 2rem;
+    font-family: var(--font-heading);
+    margin: 0;
+}
+
+.description {
+    text-transform: capitalize;
 }

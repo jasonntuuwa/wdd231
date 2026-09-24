@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Hopkins Chamber of Commerce</title>
+    <meta name="description"
+        content="Hopkins Chamber of Commerce: local news, weather, and featured member businesses.">
+    <meta name="author" content="Jason Ntuuwa">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- same fonts as directory.html -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- defer: scripts run after HTML is parsed; the files are created in the next steps -->
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <img src="images/logo.svg" alt="Hopkins Chamber of Commerce logo">
+        <p class="site-title">Hopkins Chamber of Commerce</p>
+        <button id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+        <nav>
+            <ul id="nav-menu">
+                <!-- wayfinding: class="active" marks the current page -->
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home">
+        
+        <section class="hero">
+            <img src="images/hero.webp" alt="Downtown Hopkins Main Street" width="1200" height="600"
+                fetchpriority="high">
+            <a href="join.html" class="cta">Join the Chamber</a>
+        </section>
+
+        <section id="events">
+            <h2>Current Events</h2>
+            
+            <ul>
+                <li>Placeholder event 1</li>
+                <li>Placeholder event 2</li>
+                <li>Placeholder event 3</li>
+            </ul>
+        </section>
+
+        <section id="weather">
+            <h2>Hopkins Weather</h2>
+            <div id="current-weather"></div> <!-- filled by weather.js -->
+            <div id="forecast"></div> <!-- filled by weather.js -->
+        </section>
+
+        <section id="spotlight">
+            <h2>Member Spotlight</h2>
+            <div id="spotlight-cards"></div> <!-- filled by spotlight.js -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            <p>Hopkins Chamber of Commerce</p>
+            <p>1010 1st St S, Hopkins, MN 55343</p>
+            <p>info@hopkinschamber.org | (952) 555-0100</p>
+        </div>
+        
+        <div class="footer-social">
+            <a href="https://github.com/jasonntuuwa/wdd231" target="_blank" rel="noopener" aria-label="GitHub">
+                <img src="images/github.svg" alt="GitHub icon" width="24" height="24">
+            </a>
+            <a href="https://www.linkedin.com/in/jason-ntuuwa-148856207/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="images/linkedin.svg" alt="LinkedIn icon" width="24" height="24">
+            </a>
+            <a href="https://www.instagram.com/jay_meiinn/" target="_blank" rel="noopener" aria-label="Instagram">
+                <img src="images/instagram.svg" alt="Instagram icon" width="24" height="24">
+            </a>
+        </div>
+        
+        <div class="footer-dev">
+            <p>WDD 231 | Jason Ntuuwa</p>
+            <p>&copy; <span id="year"></span> Hopkins Chamber of Commerce</p>
+            <p>Last Modification: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
