@@ -9,9 +9,16 @@
         content="Hopkins Chamber of Commerce: local news, weather, and featured member businesses.">
     <meta name="author" content="Jason Ntuuwa">
 
+    <!-- Facebook -->
+    <meta property="og:title" content="Hopkins Chamber of Commerce | Events and Local Members">
+    <meta property="og:description"
+        content="Welcome to the Hopkins Chamber of Commerce. See local events, the current weather, and featured member businesses.">
+    <meta property="og:image" content="https://jasonntuuwa.github.io/wdd231/chamber/images/og-directory.png">
+    <meta property="og:url" content="https://jasonntuuwa.github.io/wdd231/chamber/index.html">
+
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <!-- same fonts as directory.html -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -22,7 +29,7 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
-    <!-- defer: scripts run after HTML is parsed; the files are created in the next steps -->
+    
     <script src="scripts/menu.js" defer></script>
     <script src="scripts/weather.js" defer></script>
     <script src="scripts/spotlight.js" defer></script>
@@ -36,7 +43,7 @@
         <button id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
         <nav>
             <ul id="nav-menu">
-                <!-- wayfinding: class="active" marks the current page -->
+               
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="discover.html">Discover</a></li>
                 <li><a href="directory.html">Directory</a></li>
@@ -46,6 +53,8 @@
     </header>
 
     <main class="home">
+
+        <h1>Welcome to the Hopkins Chamber of Commerce</h1>
         
         <section class="hero">
             <img src="images/hero.webp" alt="Downtown Hopkins Main Street" width="1200" height="600"
@@ -65,13 +74,13 @@
 
         <section id="weather">
             <h2>Hopkins Weather</h2>
-            <div id="current-weather"></div> <!-- filled by weather.js -->
-            <div id="forecast"></div> <!-- filled by weather.js -->
+            <div id="current-weather"></div> 
+            <div id="forecast"></div> 
         </section>
 
         <section id="spotlight">
             <h2>Member Spotlight</h2>
-            <div id="spotlight-cards"></div> <!-- filled by spotlight.js -->
+            <div id="spotlight-cards"></div> 
         </section>
     </main>
 

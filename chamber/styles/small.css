@@ -175,13 +175,13 @@ footer {
     font-size: 0.85rem;
 }
 
-/* wayfinding: highlights the current page in the nav */
+
 nav a.active {
     font-weight: 700;
     border-bottom: 3px solid var(--white);
 }
 
-/* hero: img scales with the screen, CTA sits on top of it */
+
 .hero {
     position: relative;
     grid-column: 1 / -1;
@@ -191,7 +191,7 @@ nav a.active {
     display: block;
     width: 100%;
     height: auto;
-    /* keeps aspect ratio = no distortion */
+    
 }
 
 .cta {
@@ -201,7 +201,7 @@ nav a.active {
     transform: translateX(-50%);
     padding: 0.75rem 1.5rem;
     background: var(--primary-color);
-    /* white on dark green passes AA contrast */
+    
     color: var(--white);
     font-family: var(--font-heading);
     text-decoration: none;
@@ -237,7 +237,7 @@ nav a.active {
 .spotlight-card p {
     margin: 0.25rem 0;
     overflow-wrap: break-word;
-    /* long URLs won't cause horizontal scroll */
+    
 }
 
 .temp {
@@ -248,4 +248,9 @@ nav a.active {
 
 .description {
     text-transform: capitalize;
+}
+
+.home h1 {
+    grid-column: 1 / -1;
+    margin: 0;
 }

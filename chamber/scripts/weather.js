@@ -1,7 +1,7 @@
-// paste your OpenWeatherMap key here
+
 const API_KEY = '9489975057ba99029972f29d912810cf';
 
-// Hopkins, MN coordinates; units=imperial gives Fahrenheit
+
 const LAT = 44.925;
 const LON = -93.4058;
 const BASE = 'https://api.openweathermap.org/data/2.5';
