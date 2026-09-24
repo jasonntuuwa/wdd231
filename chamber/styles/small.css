@@ -106,7 +106,7 @@ main {
 }
 
 #directory-cards.grid-view {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
 }
 
 #directory-cards.list-view .card-logo {
