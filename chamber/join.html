@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join | Hopkins Chamber of Commerce</title> <!-- unique title -->
+    <meta name="description" content="Apply for membership in the Hopkins Chamber of Commerce.">
+    <meta name="author" content="Jason Ntuuwa">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/join.js" defer></script> 
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Hopkins Chamber of Commerce logo">
+        <p class="site-title">Hopkins Chamber of Commerce</p>
+        <button id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li> <!-- active moved here -->
+            </ul>
+        </nav>
+    </header>
+
+    <main class="join">
+        <h1>Join the Chamber</h1>
+
+        <div class="join-layout"> <!-- form left, cards right on large screens -->
+            <form action="thankyou.html" method="get" class="join-form"> <!-- GET, per spec -->
+            
+                <label>First Name
+                    <input type="text" name="firstName" title="Enter your first name" autocomplete="given-name" required>
+                </label>
+            
+                <label>Last Name
+                    <input type="text" name="lastName" title="Enter your last name" autocomplete="family-name" required>
+                </label>
+            
+                <label>Organizational Title
+                    <!-- letters, hyphens, spaces only; min 7 chars -->
+                    <input type="text" name="orgTitle" title="Letters, hyphens, and spaces only. Minimum 7 characters."
+                        autocomplete="organization-title" pattern="[A-Za-z \-]{7,}">
+                </label>
+            
+                <label>Email
+                    <input type="email" name="email" title="Enter your email address" autocomplete="email"
+                        placeholder="name@example.com" required>
+                </label>
+            
+                <label>Mobile Phone
+                    <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required>
+                </label>
+            
+                <label>Business/Organization Name
+                    <input type="text" name="orgName" title="Enter your business or organization name" autocomplete="organization"
+                        required>
+                </label>
+            
+                <label>Membership Level
+                    <select name="membership" title="Select a membership level">
+                        <option value="np">NP Membership (no fee)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+            
+                <label>Business/Organization Description
+                    <textarea name="description" rows="4" title="Briefly describe your business or organization"></textarea>
+                </label>
+            
+                <!-- value filled by JS on page load (later step) -->
+                <input type="hidden" name="timestamp" id="timestamp">
+            
+                <input type="submit" value="Submit Application">
+            </form>
+
+
+            <!-- cards -->
+            <section class="membership-cards" aria-label="Membership levels">
+                <!-- each card: title + link that opens its modal (Step 4) -->
+                <article class="card">
+                    <h2>NP Membership</h2>
+                    <a href="#" data-modal="modal-np">View benefits</a> <!-- data-modal = target dialog id -->
+                </article>
+            
+                <article class="card">
+                    <h2>Bronze Membership</h2>
+                    <a href="#" data-modal="modal-bronze">View benefits</a>
+                </article>
+            
+                <article class="card">
+                    <h2>Silver Membership</h2>
+                    <a href="#" data-modal="modal-silver">View benefits</a>
+                </article>
+            
+                <article class="card">
+                    <h2>Gold Membership</h2>
+                    <a href="#" data-modal="modal-gold">View benefits</a>
+                </article>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- one <dialog> per level; ids match data-modal values on the cards -->
+    <dialog id="modal-np" aria-labelledby="title-np">
+        <h2 id="title-np">NP Membership</h2>
+        <p>No fee. For non-profit organizations.</p>
+        <ul>
+            <li>Listing in the member directory</li>
+            <li>Access to monthly networking events</li>
+            <li>Chamber newsletter</li>
+        </ul>
+        <button type="button" class="close-modal">Close</button> <!-- type=button so it never submits -->
+    </dialog>
+    
+    <dialog id="modal-bronze" aria-labelledby="title-bronze">
+        <h2 id="title-bronze">Bronze Membership</h2>
+        <p>Entry-level paid membership.</p>
+        <ul>
+            <li>Everything in NP</li>
+            <li>Basic training workshops</li>
+            <li>10% discount on chamber events</li>
+        </ul>
+        <button type="button" class="close-modal">Close</button>
+    </dialog>
+    
+    <dialog id="modal-silver" aria-labelledby="title-silver">
+        <h2 id="title-silver">Silver Membership</h2>
+        <p>Mid-level paid membership.</p>
+        <ul>
+            <li>Everything in Bronze</li>
+            <li>Social media promotion</li>
+            <li>20% discount on chamber events</li>
+            <li>Rotating spotlight on the home page</li>
+        </ul>
+        <button type="button" class="close-modal">Close</button>
+    </dialog>
+    
+    <dialog id="modal-gold" aria-labelledby="title-gold">
+        <h2 id="title-gold">Gold Membership</h2>
+        <p>Top-tier paid membership.</p>
+        <ul>
+            <li>Everything in Silver</li>
+            <li>Priority spotlight position on the home page</li>
+            <li>Free admission to chamber events</li>
+            <li>Featured advertising in the newsletter</li>
+        </ul>
+        <button type="button" class="close-modal">Close</button>
+    </dialog>
+
+    <footer>
+        <div class="footer-contact">
+            <p>Hopkins Chamber of Commerce</p>
+            <p>1010 1st St S, Hopkins, MN 55343</p>
+            <p>info@hopkinschamber.org | (952) 555-0100</p>
+        </div>
+        
+        <div class="footer-social">
+            <a href="https://github.com/jasonntuuwa/wdd231" target="_blank" rel="noopener" aria-label="GitHub">
+                <img src="images/github.svg" alt="GitHub icon" width="24" height="24">
+            </a>
+            <a href="https://www.linkedin.com/in/jason-ntuuwa-148856207/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="images/linkedin.svg" alt="LinkedIn icon" width="24" height="24">
+            </a>
+            <a href="https://www.instagram.com/jay_meiinn/" target="_blank" rel="noopener" aria-label="Instagram">
+                <img src="images/instagram.svg" alt="Instagram icon" width="24" height="24">
+            </a>
+        </div>
+        
+        <div class="footer-dev">
+            <p>WDD 231 | Jason Ntuuwa</p>
+            <p>&copy; <span id="year"></span> Hopkins Chamber of Commerce</p>
+            <p>Last Modification: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -55,5 +55,10 @@
     .home {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    .join-layout {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
     
 }
