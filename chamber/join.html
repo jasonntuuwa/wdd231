@@ -34,7 +34,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="discover.html">Discover</a></li>
                 <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html" class="active">Join</a></li> <!-- active moved here -->
+                <li><a href="join.html" class="active">Join</a></li> 
             </ul>
         </nav>
     </header>
@@ -43,7 +43,7 @@
         <h1>Join the Chamber</h1>
 
         <div class="join-layout"> <!-- form left, cards right on large screens -->
-            <form action="thankyou.html" method="get" class="join-form"> <!-- GET, per spec -->
+            <form action="thankyou.html" method="get" class="join-form"> 
             
                 <label>First Name
                     <input type="text" name="firstName" title="Enter your first name" autocomplete="given-name" required>
@@ -86,7 +86,7 @@
                     <textarea name="description" rows="4" title="Briefly describe your business or organization"></textarea>
                 </label>
             
-                <!-- value filled by JS on page load (later step) -->
+                
                 <input type="hidden" name="timestamp" id="timestamp">
             
                 <input type="submit" value="Submit Application">
@@ -95,7 +95,6 @@
 
             <!-- cards -->
             <section class="membership-cards" aria-label="Membership levels">
-                <!-- each card: title + link that opens its modal (Step 4) -->
                 <article class="card">
                     <h2>NP Membership</h2>
                     <a href="#" data-modal="modal-np">View benefits</a> <!-- data-modal = target dialog id -->
@@ -120,7 +119,7 @@
         </div>
     </main>
 
-    <!-- one <dialog> per level; ids match data-modal values on the cards -->
+    
     <dialog id="modal-np" aria-labelledby="title-np">
         <h2 id="title-np">NP Membership</h2>
         <p>No fee. For non-profit organizations.</p>
@@ -129,7 +128,7 @@
             <li>Access to monthly networking events</li>
             <li>Chamber newsletter</li>
         </ul>
-        <button type="button" class="close-modal">Close</button> <!-- type=button so it never submits -->
+        <button type="button" class="close-modal">Close</button> 
     </dialog>
     
     <dialog id="modal-bronze" aria-labelledby="title-bronze">
