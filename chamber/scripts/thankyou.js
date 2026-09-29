@@ -1,7 +1,5 @@
 
 const params = new URLSearchParams(window.location.search);
-
-
 const fields = ['firstName', 'lastName', 'email', 'phone', 'orgName'];
 
 fields.forEach((name) => {
