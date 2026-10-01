@@ -1,0 +1,133 @@
+:root {
+    --bg: #12101C;
+    --surface: #1E1B2E;
+    --text: #F4F4F8;
+    --accent: #FF4F9A;
+    --accent2: #3DE0FF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", sans-serif;
+    /* body font */
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.font-heading {
+    font-family: "Oswald", sans-serif;
+    /* heading font */
+    color: var(--accent);
+}
+
+header,
+footer {
+    background: var(--surface);
+    border-bottom: 3px solid var(--accent2);
+    padding: 1rem;
+    text-align: center;
+}
+
+footer {
+    border-bottom: none;
+    border-top: 3px solid var(--accent2);
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+section {
+    background: var(--surface);
+    border-left: 4px solid var(--accent2);
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    padding: 1rem 1.25rem;
+}
+
+.font-body {
+    font-family: "Inter", sans-serif;
+    color: var(--text);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption {
+    color: var(--accent2);
+    text-align: left;
+    padding-bottom: 0.5rem;
+}
+
+th,
+td {
+    border-bottom: 1px solid var(--accent2);
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.swatch {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid var(--text);
+    vertical-align: middle;
+    margin-right: 0.4rem;
+}
+
+.swatch.bg {
+    background: var(--bg);
+}
+
+.swatch.surface {
+    background: var(--surface);
+}
+
+.swatch.text {
+    background: var(--text);
+}
+
+.swatch.accent {
+    background: var(--accent);
+}
+
+.swatch.accent2 {
+    background: var(--accent2);
+}
+
+figure {
+    margin: 1rem 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid var(--accent2);
+}
+
+figcaption {
+    color: var(--accent2);
+    margin-top: 0.4rem;
+}
+
+a {
+    color: var(--accent2);
+}
+
+@media (min-width: 768px) {
+    section {
+        padding: 1.5rem 2rem;
+    }
+}
