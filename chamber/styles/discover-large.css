@@ -1,0 +1,9 @@
+@media (min-width: 64rem) {
+    .discover-grid {
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 columns x 2 rows; each card name used once */
+        grid-template-areas:
+            "card1 card2 card3 card4"
+            "card8 card7 card6 card5";
+    }
+}

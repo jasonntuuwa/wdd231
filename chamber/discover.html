@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover | Hopkins Chamber of Commerce</title>
+    <meta name="description" content="Discover Hopkins, MN: local attractions, trails, events, and landmarks.">
+    <meta name="author" content="Jason Ntuuwa">
+
+    <!-- Facebook -->
+    <meta property="og:title" content="Discover Hopkins | Chamber of Commerce">
+    <meta property="og:description"
+        content="Explore the attractions, trails, and events that make Hopkins, MN a great place to visit and do business.">
+    <meta property="og:image" content="https://jasonntuuwa.github.io/wdd231/chamber/images/og-directory.png">
+    <meta property="og:url" content="https://jasonntuuwa.github.io/wdd231/chamber/discover.html">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    
+    <link rel="stylesheet" href="styles/discover-small.css">
+    <link rel="stylesheet" href="styles/discover-medium.css">
+    <link rel="stylesheet" href="styles/discover-large.css">
+
+    <script src="scripts/menu.js" defer></script>
+    
+    <script src="scripts/discover.js" type="module"></script>
+</head>
+
+<body>
+
+    <header>
+        <img src="images/logo.svg" alt="Hopkins Chamber of Commerce logo">
+        <p class="site-title">Hopkins Chamber of Commerce</p>
+        <button id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <!-- active moved to Discover -->
+                <li><a href="discover.html" class="active">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="discover">
+
+        <h1>Discover Hopkins</h1>
+
+        
+        <section id="visit-message" aria-live="polite"></section>
+
+        
+        <section id="discover-cards" class="discover-grid"></section>
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            <p>Hopkins Chamber of Commerce</p>
+            <p>1010 1st St S, Hopkins, MN 55343</p>
+            <p>info@hopkinschamber.org | (952) 555-0100</p>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://github.com/jasonntuuwa/wdd231" target="_blank" rel="noopener" aria-label="GitHub">
+                <img src="images/github.svg" alt="GitHub icon" width="24" height="24">
+            </a>
+            <a href="https://www.linkedin.com/in/jason-ntuuwa-148856207/" target="_blank" rel="noopener"
+                aria-label="LinkedIn">
+                <img src="images/linkedin.svg" alt="LinkedIn icon" width="24" height="24">
+            </a>
+            <a href="https://www.instagram.com/jay_meiinn/" target="_blank" rel="noopener" aria-label="Instagram">
+                <img src="images/instagram.svg" alt="Instagram icon" width="24" height="24">
+            </a>
+        </div>
+
+        <div class="footer-dev">
+            <p>WDD 231 | Jason Ntuuwa</p>
+            <p>&copy; <span id="year"></span> Hopkins Chamber of Commerce</p>
+            <p>Last Modification: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

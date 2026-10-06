@@ -1,0 +1,21 @@
+@media (min-width: 32rem) {
+    .discover-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns x 4 rows; rows alternate order so it's not just a wider list */
+        grid-template-areas:
+            "card1 card2"
+            "card4 card3"
+            "card5 card6"
+            "card8 card7";
+    }
+
+    /* Hover effect lives here only, so it never applies on mobile */
+    .card img {
+        transition: transform 0.4s ease, filter 0.4s ease;
+    }
+
+    .card img:hover {
+        transform: scale(1.1);
+        filter: brightness(1.1) saturate(1.3);
+    }
+}

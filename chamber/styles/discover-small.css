@@ -1,0 +1,125 @@
+.discover h1 {
+    margin: 1rem;
+}
+
+#visit-message {
+    margin: 0 1rem 1rem;
+    padding: 0.75rem 1rem;
+    border-left: 0.25rem solid #333;
+    /* swap for your brand color */
+    background: #f2f2f2;
+    color: #111;
+}
+
+.discover-grid {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    grid-auto-rows: 1fr;
+    /* Small layout: one stacked column */
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+    /* image touches the borders */
+    border: 0.0625rem solid #ccc;
+    background: #fff;
+    color: #111;
+    overflow: hidden;
+}
+
+.card figure {
+    margin: 0;
+    overflow: hidden;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    /* matches the 300x200 photos */
+    object-fit: cover;
+}
+
+.card h2,
+.card address,
+.card p {
+    margin: 0;
+    padding: 0 1rem;
+}
+
+.card p {
+    flex: 1;
+    
+}
+
+.card h2 {
+    padding-top: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.3;
+    min-height: 2.6rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card address {
+    font-style: normal;
+    font-size: 0.9rem;
+}
+
+.card button {
+    margin: auto 1rem 1rem;
+    align-self: flex-start;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+/* Each card claims its named grid area (classes set in discover.js) */
+.card1 {
+    grid-area: card1;
+}
+
+.card2 {
+    grid-area: card2;
+}
+
+.card3 {
+    grid-area: card3;
+}
+
+.card4 {
+    grid-area: card4;
+}
+
+.card5 {
+    grid-area: card5;
+}
+
+.card6 {
+    grid-area: card6;
+}
+
+.card7 {
+    grid-area: card7;
+}
+
+.card8 {
+    grid-area: card8;
+}
