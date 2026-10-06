@@ -7,7 +7,7 @@ const cardsContainer = document.querySelector("#discover-cards");
 places.forEach((place, index) => {
     const card = document.createElement("article");
     
-    card.classList.add("card", `card${index + 1}`);
+    card.classList.add("discover-card", `card${index + 1}`);
 
     card.innerHTML = `
     <h2>${place.name}</h2>

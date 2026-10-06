@@ -10,11 +10,11 @@
     }
 
     /* Hover effect lives here only, so it never applies on mobile */
-    .card img {
+    .discover-card img {
         transition: transform 0.4s ease, filter 0.4s ease;
     }
 
-    .card img:hover {
+    .discover-card img:hover {
         transform: scale(1.1);
         filter: brightness(1.1) saturate(1.3);
     }
