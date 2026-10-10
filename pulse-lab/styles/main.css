@@ -1,10 +1,54 @@
 :root {
+    /* Colors */
     --bg: #12101C;
     --surface: #1E1B2E;
     --text: #F4F4F8;
     --accent: #FF4F9A;
     --accent2: #3DE0FF;
+    --overlay: #12101Cd9;
+    --backdrop: #000000b3;
+
+    /* Fonts */
+    --font-heading: "Oswald", sans-serif;
+    --font-body: "Inter", sans-serif;
+    --fw-regular: 400;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --fs-logo: 1.6rem;
+    --fs-menu: 1.5rem;
+    --fs-price: 1.25rem;
+    --lh-body: 1.6;
+    --lh-heading: 1.2;
+
+    /* Spacing scale */
+    --space-2xs: 0.25rem;
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.25rem;
+    --space-xl: 1.5rem;
+    --space-2xl: 2rem;
+
+    /* Borders and radius */
     --radius: 8px;
+    --border-thin: 1px;
+    --border-md: 2px;
+    --border-thick: 3px;
+    --border-accent: 4px;
+    --outline-offset: 2px;
+
+    /* Widths and layout */
+    --content-width: 1100px;
+    --modal-width: 480px;
+    --modal-fluid-width: 90%;
+    --hero-text-width: 420px;
+    --full-width: 100%;
+    --cols-one: 1fr;
+    --cols-two: 1fr 1fr;
+    --cols-three: repeat(3, 1fr);
+
+    /* Content */
+    --favorite-star: " \2605";
 }
 
 * {
@@ -15,16 +59,16 @@ body {
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: "Inter", sans-serif;
-    line-height: 1.6;
+    font-family: var(--font-body);
+    line-height: var(--lh-body);
 }
 
 h1,
 h2,
 h3 {
-    font-family: "Oswald", sans-serif;
+    font-family: var(--font-heading);
     color: var(--accent);
-    line-height: 1.2;
+    line-height: var(--lh-heading);
 }
 
 a {
@@ -32,7 +76,7 @@ a {
 }
 
 img {
-    max-width: 100%;
+    max-width: var(--full-width);
     height: auto;
     display: block;
 }
@@ -40,18 +84,18 @@ img {
 /* Header and small-screen nav */
 header {
     background: var(--surface);
-    border-bottom: 3px solid var(--accent2);
+    border-bottom: var(--border-thick) solid var(--accent2);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 0.75rem 1rem;
+    padding: var(--space-sm) var(--space-md);
 }
 
 .logo {
-    font-family: "Oswald", sans-serif;
-    font-size: 1.6rem;
-    font-weight: 700;
+    font-family: var(--font-heading);
+    font-size: var(--fs-logo);
+    font-weight: var(--fw-bold);
     color: var(--text);
     text-decoration: none;
 }
@@ -62,16 +106,16 @@ header {
 
 #menu-button {
     background: none;
-    border: 2px solid var(--accent2);
+    border: var(--border-md) solid var(--accent2);
     border-radius: var(--radius);
     color: var(--accent2);
-    font-size: 1.5rem;
-    padding: 0.25rem 0.6rem;
+    font-size: var(--fs-menu);
+    padding: var(--space-2xs) var(--space-xs);
     cursor: pointer;
 }
 
 nav {
-    width: 100%;
+    width: var(--full-width);
     display: none;
 }
 
@@ -81,16 +125,16 @@ nav.open {
 
 nav ul {
     list-style: none;
-    margin: 0.75rem 0 0;
+    margin: var(--space-sm) 0 0;
     padding: 0;
 }
 
 nav a {
     display: block;
-    padding: 0.75rem 0.5rem;
+    padding: var(--space-sm) var(--space-xs);
     color: var(--text);
     text-decoration: none;
-    border-bottom: 1px solid var(--bg);
+    border-bottom: var(--border-thin) solid var(--bg);
 }
 
 nav a:hover,
@@ -101,25 +145,25 @@ nav a:focus-visible {
 /* Wayfinding: highlight the current page */
 nav a[aria-current="page"] {
     color: var(--accent);
-    font-weight: 600;
-    border-bottom: 3px solid var(--accent);
+    font-weight: var(--fw-semibold);
+    border-bottom: var(--border-thick) solid var(--accent);
 }
 
 main {
-    max-width: 1100px;
+    max-width: var(--content-width);
     margin: 0 auto;
-    padding: 1rem;
+    padding: var(--space-md);
 }
 
 footer {
     background: var(--surface);
-    border-top: 3px solid var(--accent2);
-    padding: 1rem;
+    border-top: var(--border-thick) solid var(--accent2);
+    padding: var(--space-md);
     text-align: center;
 }
 
 footer p {
-    margin: 0.25rem 0;
+    margin: var(--space-2xs) 0;
 }
 
 /* Hero */
@@ -130,13 +174,13 @@ footer p {
 }
 
 .hero img {
-    width: 100%;
+    width: var(--full-width);
     height: auto;
 }
 
 .hero-text {
-    background: rgba(18, 16, 28, 0.85);
-    padding: 1.25rem;
+    background: var(--overlay);
+    padding: var(--space-lg);
 }
 
 .button,
@@ -146,8 +190,8 @@ footer p {
     color: var(--bg);
     border: none;
     border-radius: var(--radius);
-    font-weight: 600;
-    padding: 0.7rem 1.2rem;
+    font-weight: var(--fw-semibold);
+    padding: var(--space-sm) var(--space-lg);
     text-decoration: none;
     cursor: pointer;
 }
@@ -160,24 +204,24 @@ footer p {
 /* Beat cards */
 .beat-grid {
     display: grid;
-    gap: 1rem;
-    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    grid-template-columns: var(--cols-one);
 }
 
 .beat-card {
     background: var(--surface);
-    border-left: 4px solid var(--accent2);
+    border-left: var(--border-accent) solid var(--accent2);
     border-radius: var(--radius);
-    padding: 1rem;
+    padding: var(--space-md);
 }
 
 .beat-card h3 {
-    margin: 0 0 0.25rem;
+    margin: 0 0 var(--space-2xs);
 }
 
 .beat-card ul {
     list-style: none;
-    margin: 0.5rem 0;
+    margin: var(--space-xs) 0;
     padding: 0;
 }
 
@@ -187,73 +231,32 @@ footer p {
 }
 
 .price {
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: var(--fs-price);
+    font-weight: var(--fw-semibold);
 }
 
 /* About */
 .about {
     display: grid;
-    gap: 1rem;
+    gap: var(--space-md);
     align-items: center;
-    margin-top: 2rem;
+    margin-top: var(--space-2xl);
 }
 
 .about img {
     border-radius: var(--radius);
 }
 
-@media (min-width: 768px) {
-    .hero-text {
-        position: absolute;
-        left: 1.5rem;
-        bottom: 1.5rem;
-        max-width: 420px;
-        border-radius: var(--radius);
-    }
-
-    .beat-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .about {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-
-/* Large screens: horizontal nav, hide hamburger */
-@media (min-width: 768px) {
-    #menu-button {
-        display: none;
-    }
-
-    nav {
-        display: block;
-        width: auto;
-    }
-
-    nav ul {
-        display: flex;
-        gap: 1rem;
-        margin: 0;
-    }
-
-    nav a {
-        border-bottom: 3px solid transparent;
-    }
-}
-
 /* Filters */
 .filters {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: var(--space-md);
     align-items: center;
     background: var(--surface);
     border-radius: var(--radius);
-    padding: 1rem;
-    margin-bottom: 1rem;
+    padding: var(--space-md);
+    margin-bottom: var(--space-md);
 }
 
 .filters p {
@@ -264,10 +267,10 @@ footer p {
 select {
     background: var(--bg);
     color: var(--text);
-    border: 2px solid var(--accent2);
+    border: var(--border-md) solid var(--accent2);
     border-radius: var(--radius);
     font: inherit;
-    padding: 0.4rem 0.6rem;
+    padding: var(--space-xs) var(--space-sm);
 }
 
 /* Favorited cards */
@@ -276,7 +279,7 @@ select {
 }
 
 .beat-card.favorite h3::after {
-    content: " \2605";
+    content: var(--favorite-star);
     color: var(--accent);
 }
 
@@ -284,19 +287,19 @@ select {
 dialog {
     background: var(--surface);
     color: var(--text);
-    border: 2px solid var(--accent2);
+    border: var(--border-md) solid var(--accent2);
     border-radius: var(--radius);
-    max-width: 480px;
-    width: 90%;
+    max-width: var(--modal-width);
+    width: var(--modal-fluid-width);
     padding: 0;
 }
 
 dialog::backdrop {
-    background: rgba(0, 0, 0, 0.7);
+    background: var(--backdrop);
 }
 
 #modal-content {
-    padding: 1.25rem 1.25rem 0;
+    padding: var(--space-lg) var(--space-lg) 0;
 }
 
 #modal-content ul {
@@ -306,13 +309,13 @@ dialog::backdrop {
 
 .close-button {
     display: block;
-    margin: 1rem 1.25rem 1.25rem auto;
+    margin: var(--space-md) var(--space-lg) var(--space-lg) auto;
     background: none;
     color: var(--accent2);
-    border: 2px solid var(--accent2);
+    border: var(--border-md) solid var(--accent2);
     border-radius: var(--radius);
     font: inherit;
-    padding: 0.5rem 1rem;
+    padding: var(--space-xs) var(--space-md);
     cursor: pointer;
 }
 
@@ -321,23 +324,23 @@ button:focus-visible,
 select:focus-visible,
 input:focus-visible,
 a:focus-visible {
-    outline: 3px solid var(--accent2);
-    outline-offset: 2px;
+    outline: var(--border-thick) solid var(--accent2);
+    outline-offset: var(--outline-offset);
 }
 
 /* Booking form */
 .booking-form {
     display: grid;
-    gap: 1rem;
+    gap: var(--space-md);
     background: var(--surface);
     border-radius: var(--radius);
-    padding: 1.25rem;
+    padding: var(--space-lg);
 }
 
 label {
     display: block;
-    margin-bottom: 0.3rem;
-    font-weight: 600;
+    margin-bottom: var(--space-2xs);
+    font-weight: var(--fw-semibold);
 }
 
 input[type="text"],
@@ -346,13 +349,13 @@ input[type="tel"],
 input[type="date"],
 select,
 textarea {
-    width: 100%;
+    width: var(--full-width);
     background: var(--bg);
     color: var(--text);
-    border: 2px solid var(--accent2);
+    border: var(--border-md) solid var(--accent2);
     border-radius: var(--radius);
     font: inherit;
-    padding: 0.6rem;
+    padding: var(--space-sm);
 }
 
 /* Invalid feedback only after the user has typed */
@@ -365,39 +368,29 @@ textarea:user-invalid {
 .checkbox-row {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
+    gap: var(--space-xs);
 }
 
 .checkbox-row label {
     margin: 0;
-    font-weight: 400;
+    font-weight: var(--fw-regular);
 }
 
 /* Thanks page summary */
 .summary {
     background: var(--surface);
-    border-left: 4px solid var(--accent2);
+    border-left: var(--border-accent) solid var(--accent2);
     border-radius: var(--radius);
-    padding: 1rem 1.25rem;
+    padding: var(--space-md) var(--space-lg);
 }
 
 .summary dt {
     color: var(--accent);
-    font-weight: 600;
-    margin-top: 0.75rem;
+    font-weight: var(--fw-semibold);
+    margin-top: var(--space-sm);
 }
 
 .summary dd {
     margin: 0;
     overflow-wrap: anywhere;
-}
-
-@media (min-width: 768px) {
-    .booking-form {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .booking-form .full {
-        grid-column: 1 / -1;
-    }
 }

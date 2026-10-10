@@ -1,0 +1,46 @@
+
+@media (min-width: 768px) {
+
+    
+    #menu-button {
+        display: none;
+    }
+
+    nav {
+        display: block;
+        width: auto;
+    }
+
+    nav ul {
+        display: flex;
+        gap: var(--space-md);
+        margin: 0;
+    }
+
+    nav a {
+        border-bottom: var(--border-thick) solid var(--surface);
+    }
+
+    
+    .hero-text {
+        position: absolute;
+        left: var(--space-xl);
+        bottom: var(--space-xl);
+        max-width: var(--hero-text-width);
+        border-radius: var(--radius);
+    }
+
+    
+    .beat-grid {
+        grid-template-columns: var(--cols-three);
+    }
+
+    .about,
+    .booking-form {
+        grid-template-columns: var(--cols-two);
+    }
+
+    .booking-form .full {
+        grid-column: 1 / -1;
+    }
+}
