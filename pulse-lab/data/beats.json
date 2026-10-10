@@ -1,0 +1,162 @@
+[
+    {
+        "id": 1,
+        "title": "Midnight Drive",
+        "genre": "Trap",
+        "bpm": 140,
+        "key": "F# Minor",
+        "mood": "Dark",
+        "price": 29,
+        "description": "Heavy 808s with a haunting synth lead."
+    },
+    {
+        "id": 2,
+        "title": "Golden Hour",
+        "genre": "R&B",
+        "bpm": 90,
+        "key": "C Major",
+        "mood": "Warm",
+        "price": 35,
+        "description": "Smooth keys and a laid-back drum groove."
+    },
+    {
+        "id": 3,
+        "title": "Kampala Nights",
+        "genre": "Afrobeats",
+        "bpm": 102,
+        "key": "A Minor",
+        "mood": "Energetic",
+        "price": 39,
+        "description": "Bouncy percussion with bright guitar plucks."
+    },
+    {
+        "id": 4,
+        "title": "Concrete Dreams",
+        "genre": "Hip Hop",
+        "bpm": 88,
+        "key": "D Minor",
+        "mood": "Gritty",
+        "price": 25,
+        "description": "Dusty sample chops over hard-hitting drums."
+    },
+    {
+        "id": 5,
+        "title": "Neon Skyline",
+        "genre": "Synthwave",
+        "bpm": 118,
+        "key": "E Minor",
+        "mood": "Dreamy",
+        "price": 32,
+        "description": "Retro pads and a pulsing analog bassline."
+    },
+    {
+        "id": 6,
+        "title": "Slow Burn",
+        "genre": "R&B",
+        "bpm": 72,
+        "key": "G Minor",
+        "mood": "Sensual",
+        "price": 35,
+        "description": "Slow tempo with layered vocal textures."
+    },
+    {
+        "id": 7,
+        "title": "Island Breeze",
+        "genre": "Afrobeats",
+        "bpm": 98,
+        "key": "B Minor",
+        "mood": "Uplifting",
+        "price": 39,
+        "description": "Sunny melodies with a rolling log drum pattern."
+    },
+    {
+        "id": 8,
+        "title": "Static Rain",
+        "genre": "Lo-Fi",
+        "bpm": 78,
+        "key": "A Major",
+        "mood": "Chill",
+        "price": 19,
+        "description": "Vinyl crackle, soft piano, and mellow drums."
+    },
+    {
+        "id": 9,
+        "title": "Iron Will",
+        "genre": "Trap",
+        "bpm": 150,
+        "key": "C Minor",
+        "mood": "Aggressive",
+        "price": 29,
+        "description": "Distorted bass with rapid-fire hi-hats."
+    },
+    {
+        "id": 10,
+        "title": "Sunday Soul",
+        "genre": "Hip Hop",
+        "bpm": 84,
+        "key": "F Major",
+        "mood": "Soulful",
+        "price": 25,
+        "description": "Gospel-inspired chords and crisp snares."
+    },
+    {
+        "id": 11,
+        "title": "Afterglow",
+        "genre": "Synthwave",
+        "bpm": 110,
+        "key": "D Major",
+        "mood": "Nostalgic",
+        "price": 32,
+        "description": "Shimmering arpeggios and a gated reverb snare."
+    },
+    {
+        "id": 12,
+        "title": "Paper Planes",
+        "genre": "Lo-Fi",
+        "bpm": 82,
+        "key": "E Major",
+        "mood": "Calm",
+        "price": 19,
+        "description": "Gentle guitar loops for study or late nights."
+    },
+    {
+        "id": 13,
+        "title": "Lagos Lights",
+        "genre": "Afrobeats",
+        "bpm": 106,
+        "key": "G Major",
+        "mood": "Party",
+        "price": 39,
+        "description": "Club-ready groove with a catchy vocal chop."
+    },
+    {
+        "id": 14,
+        "title": "Velvet Hour",
+        "genre": "R&B",
+        "bpm": 80,
+        "key": "A# Minor",
+        "mood": "Smooth",
+        "price": 35,
+        "description": "Silky bass and airy pads built for hooks."
+    },
+    {
+        "id": 15,
+        "title": "Backstreet King",
+        "genre": "Hip Hop",
+        "bpm": 92,
+        "key": "G# Minor",
+        "mood": "Confident",
+        "price": 25,
+        "description": "Punchy drums and a menacing piano riff."
+    },
+    {
+        "id": 16,
+        "title": "Echo Chamber",
+        "genre": "Trap",
+        "bpm": 136,
+        "key": "B Minor",
+        "mood": "Eerie",
+        "price": 29,
+        "description": "Cavernous reverb with sparse, hypnotic melodies."
+    }
+]

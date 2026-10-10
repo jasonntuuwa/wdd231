@@ -1,0 +1,403 @@
+:root {
+    --bg: #12101C;
+    --surface: #1E1B2E;
+    --text: #F4F4F8;
+    --accent: #FF4F9A;
+    --accent2: #3DE0FF;
+    --radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Oswald", sans-serif;
+    color: var(--accent);
+    line-height: 1.2;
+}
+
+a {
+    color: var(--accent2);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header and small-screen nav */
+header {
+    background: var(--surface);
+    border-bottom: 3px solid var(--accent2);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+}
+
+.logo {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+#menu-button {
+    background: none;
+    border: 2px solid var(--accent2);
+    border-radius: var(--radius);
+    color: var(--accent2);
+    font-size: 1.5rem;
+    padding: 0.25rem 0.6rem;
+    cursor: pointer;
+}
+
+nav {
+    width: 100%;
+    display: none;
+}
+
+nav.open {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0.75rem 0 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    padding: 0.75rem 0.5rem;
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--bg);
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: var(--accent2);
+}
+
+/* Wayfinding: highlight the current page */
+nav a[aria-current="page"] {
+    color: var(--accent);
+    font-weight: 600;
+    border-bottom: 3px solid var(--accent);
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+footer {
+    background: var(--surface);
+    border-top: 3px solid var(--accent2);
+    padding: 1rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    background: rgba(18, 16, 28, 0.85);
+    padding: 1.25rem;
+}
+
+.button,
+.details-button {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    border-radius: var(--radius);
+    font-weight: 600;
+    padding: 0.7rem 1.2rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover,
+.details-button:hover {
+    background: var(--accent2);
+}
+
+/* Beat cards */
+.beat-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+.beat-card {
+    background: var(--surface);
+    border-left: 4px solid var(--accent2);
+    border-radius: var(--radius);
+    padding: 1rem;
+}
+
+.beat-card h3 {
+    margin: 0 0 0.25rem;
+}
+
+.beat-card ul {
+    list-style: none;
+    margin: 0.5rem 0;
+    padding: 0;
+}
+
+.genre {
+    color: var(--accent2);
+    margin: 0;
+}
+
+.price {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* About */
+.about {
+    display: grid;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.about img {
+    border-radius: var(--radius);
+}
+
+@media (min-width: 768px) {
+    .hero-text {
+        position: absolute;
+        left: 1.5rem;
+        bottom: 1.5rem;
+        max-width: 420px;
+        border-radius: var(--radius);
+    }
+
+    .beat-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* Large screens: horizontal nav, hide hamburger */
+@media (min-width: 768px) {
+    #menu-button {
+        display: none;
+    }
+
+    nav {
+        display: block;
+        width: auto;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 1rem;
+        margin: 0;
+    }
+
+    nav a {
+        border-bottom: 3px solid transparent;
+    }
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.filters p {
+    margin: 0;
+    margin-left: auto;
+}
+
+select {
+    background: var(--bg);
+    color: var(--text);
+    border: 2px solid var(--accent2);
+    border-radius: var(--radius);
+    font: inherit;
+    padding: 0.4rem 0.6rem;
+}
+
+/* Favorited cards */
+.beat-card.favorite {
+    border-left-color: var(--accent);
+}
+
+.beat-card.favorite h3::after {
+    content: " \2605";
+    color: var(--accent);
+}
+
+/* Modal */
+dialog {
+    background: var(--surface);
+    color: var(--text);
+    border: 2px solid var(--accent2);
+    border-radius: var(--radius);
+    max-width: 480px;
+    width: 90%;
+    padding: 0;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#modal-content {
+    padding: 1.25rem 1.25rem 0;
+}
+
+#modal-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.close-button {
+    display: block;
+    margin: 1rem 1.25rem 1.25rem auto;
+    background: none;
+    color: var(--accent2);
+    border: 2px solid var(--accent2);
+    border-radius: var(--radius);
+    font: inherit;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+/* Visible keyboard focus */
+button:focus-visible,
+select:focus-visible,
+input:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--accent2);
+    outline-offset: 2px;
+}
+
+/* Booking form */
+.booking-form {
+    display: grid;
+    gap: 1rem;
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    background: var(--bg);
+    color: var(--text);
+    border: 2px solid var(--accent2);
+    border-radius: var(--radius);
+    font: inherit;
+    padding: 0.6rem;
+}
+
+/* Invalid feedback only after the user has typed */
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+    border-color: var(--accent);
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.checkbox-row label {
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Thanks page summary */
+.summary {
+    background: var(--surface);
+    border-left: 4px solid var(--accent2);
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+}
+
+.summary dt {
+    color: var(--accent);
+    font-weight: 600;
+    margin-top: 0.75rem;
+}
+
+.summary dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+@media (min-width: 768px) {
+    .booking-form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .booking-form .full {
+        grid-column: 1 / -1;
+    }
+}

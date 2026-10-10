@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Beats | Pulse Lab</title>
+
+    <meta name="description"
+        content="Browse 16 original beats in trap, R&B, Afrobeats, hip hop, synthwave, and lo-fi. Filter by genre and save your favorites.">
+    <meta property="og:title" content="Beats | Pulse Lab">
+    <meta property="og:description" content="Browse original beats by genre, BPM, key, and mood.">
+    <meta property="og:url" content="https://jasonntuuwa.github.io/wdd231/pulse-lab/beats.html">
+    <meta property="og:image" content="https://jasonntuuwa.github.io/wdd231/pulse-lab/images/og-image.png">
+
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script type="module" src="scripts/main.mjs"></script>
+    <script type="module" src="scripts/beats.mjs"></script
+</head>
+
+<body>
+    <header>
+        <a class="logo" href="index.html">Pulse<span>Lab</span></a>
+        <!-- Hamburger button: visible on small screens only -->
+        <button id="menu-button" aria-expanded="false" aria-controls="site-nav"
+            aria-label="Toggle navigation menu">&#9776;</button>
+        <nav id="site-nav" aria-label="Main navigation">
+            <ul>
+                <!-- aria-current="page" marks the active page (wayfinding); move it per page -->
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="beats.html">Beats</a></li>
+                <li><a href="contact.html">Book a Session</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- page content goes here -->
+        <main>
+            <h1>Beat Catalog</h1>
+            <p>Browse original beats, filter by genre, and save your favorites.</p>
+        
+            <form class="filters" aria-label="Filter beats">
+                <div>
+                    <label for="genre-filter">Genre</label>
+                    <select id="genre-filter">
+                        <option value="all">All genres</option>
+                        <!-- Genre options are added by beats.mjs -->
+                    </select>
+                </div>
+                <div>
+                    <input type="checkbox" id="favorites-only">
+                    <label for="favorites-only">Favorites only</label>
+                </div>
+                <p id="result-count" aria-live="polite"></p>
+            </form>
+        
+            <div id="beat-grid" class="beat-grid"></div>
+        
+            <dialog id="beat-modal" aria-labelledby="modal-title">
+                <div id="modal-content"></div>
+                <button type="button" id="modal-close" class="close-button">Close</button>
+            </dialog>
+        </main>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Pulse Lab | Jason Ntuuwa | Hopkins, MN</p>
+        <p>
+            <a href="attributions.html">Attributions</a> |
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener">Video Demo</a>
+        </p>
+        <p>Last modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+
+</html>

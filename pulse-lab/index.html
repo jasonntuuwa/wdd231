@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse Lab | Music Production Studio</title>
+    <meta name="description"
+        content="Pulse Lab is an independent music production studio offering custom beats, mixing, and mastering.">
+    <meta name="author" content="Jason Ntuuwa">
+    <!-- Open Graph tags for social sharing -->
+    <meta property="og:title" content="Pulse Lab | Music Production Studio">
+    <meta property="og:description" content="Custom beats, mixing, and mastering from an independent studio.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jasonntuuwa.github.io/wdd231/pulse-lab/index.html">
+    <meta property="og:image" content="https://jasonntuuwa.github.io/wdd231/pulse-lab/images/og-image.png">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <script type="module" src="scripts/main.mjs"></script>
+</head>
+
+<body>
+    <header>
+        <a class="logo" href="index.html">Pulse<span>Lab</span></a>
+        <!-- Hamburger button: visible on small screens only -->
+        <button id="menu-button" aria-expanded="false" aria-controls="site-nav"
+            aria-label="Toggle navigation menu">&#9776;</button>
+        <nav id="site-nav" aria-label="Main navigation">
+            <ul>
+                <!-- aria-current="page" marks the active page (wayfinding); move it per page -->
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="beats.html">Beats</a></li>
+                <li><a href="contact.html">Book a Session</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- page content goes here -->
+        <main>
+            <section class="hero">
+                <!-- Hero loads eagerly (it's above the fold); width/height set the intrinsic aspect ratio -->
+                <img src="images/hero.webp" alt="Music producer working at a mixing console in a dim studio" width="1200"
+                    height="600" fetchpriority="high">
+                <div class="hero-text">
+                    <h1>Your Sound, Engineered</h1>
+                    <p>Custom beats, mixing, and mastering from an independent studio.</p>
+                    <a class="button" href="beats.html">Browse Beats</a>
+                </div>
+            </section>
+        
+            <section>
+                <h2>Featured Beats</h2>
+                <!-- Filled by main.mjs from data/beats.json -->
+                <div id="featured-beats" class="beat-grid" aria-live="polite"></div>
+            </section>
+        
+            <section class="about">
+                <div>
+                    <h2>About Pulse Lab</h2>
+                    <p>Pulse Lab is a one-person studio focused on trap, R&amp;B, Afrobeats, and lo-fi production. Every beat is
+                        built from scratch, and every project gets the same attention from first draft to final master.</p>
+                    <p>Ready to start? <a href="contact.html">Book a session</a> and tell us about your project.</p>
+                </div>
+                <!-- Below the fold, so it lazy loads -->
+                <img src="images/studio.webp" alt="Studio microphone and headphones on a desk" width="600" height="400"
+                    loading="lazy">
+            </section>
+        </main>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Pulse Lab | Jason Ntuuwa | Hopkins, MN</p>
+        <p>
+            <a href="attributions.html">Attributions</a> |
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener">Video Demo</a>
+        </p>
+        <p>Last modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+
+</html>
