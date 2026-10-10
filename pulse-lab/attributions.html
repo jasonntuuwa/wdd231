@@ -4,22 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Attributions | Pulse Lab</title>
-
-    <meta name="description" content="Image and content credits for the Pulse Lab website.">
+    <title>Attributions | Pulse Lab Credits</title>
+    <meta name="description"
+        content="Image, font, and content credits for the Pulse Lab music production studio website.">
     <meta name="author" content="Jason Ntuuwa">
+    <meta property="og:title" content="Attributions | Pulse Lab Credits">
+    <meta property="og:description"
+        content="Image, font, and content credits for the Pulse Lab music production studio website.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jasonntuuwa.github.io/wdd231/pulse-lab/attributions.html">
+    <meta property="og:image" content="https://jasonntuuwa.github.io/wdd231/pulse-lab/images/og-image.png">
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <script type="module" src="scripts/main.mjs"></script>
 </head>
 
 <body>
-    <h1>Attributions</h1>
-    <ul>
-        <li>Hero image: photographer name, source link</li>
-        <li>Studio image: photographer name, source link</li>
-        <li>Fonts: Oswald and Inter via Google Fonts</li>
-    </ul>
-    <p><a href="index.html">Back to Home</a></p>
+    <header>
+        <a class="logo" href="index.html">Pulse<span>Lab</span></a>
+        <button id="menu-button" aria-expanded="false" aria-controls="site-nav"
+            aria-label="Toggle navigation menu">&#9776;</button>
+        <nav id="site-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="beats.html">Beats</a></li>
+                <li><a href="contact.html">Book a Session</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Attributions</h1>
+        <ul>
+            <li>Hero image (hero.webp): Be On Air, <a href="https://beonair.com/blog/how-to-be-heard-audio-consoles-in-studio/"
+                    target="_blank" rel="noopener">How to Be Heard: It Starts With the Audio Consoles in the Studio</a></li>
+            <li>Studio image (studio.webp): Music Street, <a
+                    href="https://www.musicstreet.co.uk/blogs/blog-post/261c3b8c-34fe-4f9f-978c-a9345d49c273-studio-recording-equipment-essentials-what-you-need-to-get-started"
+                    target="_blank" rel="noopener">Studio Recording Equipment Essentials: What You Need to Get Started</a></li>
+            <li>Fonts: Oswald and Inter via <a href="https://fonts.google.com/">Google Fonts</a></li>
+            <li>Beat titles, descriptions, and site text: written by Jason Ntuuwa</li>
+        </ul>
+        <p><a href="index.html">Back to Home</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Pulse Lab | Jason Ntuuwa | Hopkins, MN</p>
+        <p>
+            <a href="attributions.html">Attributions</a> |
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener">Video Demo</a>
+        </p>
+        <p>Last modified: <span id="last-modified"></span></p>
+    </footer>
 </body>
 
 </html>
